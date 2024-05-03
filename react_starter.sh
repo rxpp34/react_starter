@@ -29,6 +29,8 @@ root.render(
 
 touch App.js
 
+mkdir Component
+
 mkdir Assets
 
 cd Assets 
