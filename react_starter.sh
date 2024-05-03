@@ -45,5 +45,59 @@ npm init -y
 
 npm install axios cors dotenv express jsonwebtoken mysql nodemailer nodemain --save
 
+echo "const port=8080 ; 
+const express=require("express") ; 
+const app=express() ;
+const cors = require('cors');
+
+
+var allowCrossDomain = function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', "*");
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    next();
+}
+
+app.use(allowCrossDomain);
+app.use(express.json());
+
+app.get("/", (req,res) => {
+    res.send("[⚡] Server Listening on port "+port)
+})
+
+
+
+app.listen(port , console.log("\x1b[34m","[⚡] SERVER LISTENING ON PORT "+port)) > index.js
+
+
+echo "const mysql=require("mysql")
+
+const dotenv = require('dotenv');
+dotenv.config({path :"./DB_CONFIG.env"});
+
+const conx=mysql.createConnection({
+    host : process.env.DB_HOST, 
+    user : process.env.DB_USER,
+    password :process.env.DB_PASSWORD,
+    database : process.env.DB_DATABASE,
+    dateStrings: true
+}) ; 
+
+/*conx.connect((error) => {
+    if (error) throw error  
+    console.log("\x1b[34m","[⚡] DATABASE CONNECTED ")
+    
+    
+})*/
+
+
+
+module.exports=conx ;" > db.config.js
+
+
+
+
+
+
 
 
